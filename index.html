@@ -1,0 +1,129 @@
+<html>
+<head>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/fonts/font.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+	
+	<div class="title-holder">
+		<img src="assets/img/logo.png" style="border-radius: 80px; width: 50px; height: 50px; position: fixed; left: 15px; top: 5px;">
+		<h1 class="title">HOROSCOPE</h1>
+		<img src="assets/img/logo-2.png" style="border-radius: 80px; width: 50px; height: 50px; position: fixed; right: 0px; top: 5px; margin-right: 15px;">
+	</div>
+	
+	<div class="month-holder">
+		<div class="please-enter">
+			PLEASE ENTER YOUR BIRTHDATE
+		</div>
+		<select class="month" id="month">
+			<option value="">Select Month</option>
+			<option value="13">January</option>
+			<option value="14">February</option>
+			<option value="3">March</option>
+			<option value="4">April</option>
+			<option value="5">May</option>
+			<option value="6">June</option>
+			<option value="7">July</option>
+			<option value="8">August</option>
+			<option value="9">September</option>
+			<option value="10">October</option>
+			<option value="11">November</option>
+			<option value="12">December</option>
+		</select>
+	</div>
+	
+	<div class="day-holder">
+		<select class="day" id="day">
+			<option value="">Select Day</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+			<option value="26">26</option>
+			<option value="27">27</option>
+			<option value="28">28</option>
+			<option value="29">29</option>
+			<option value="30">30</option>
+			<option value="31">31</option>
+		</select>
+	</div>
+	
+	<div class="button-holder" style="position: fixed; bottom: 10px; width: 100%;">
+		<button class="btn btn-primary" id="show-horoscope">ENTER</button>
+	</div>
+	
+</body>
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script>
+		var Month = [0,0,0,61,92,122,153,183,214,245,275,306,336,367,398];
+		$(document).ready(function(){
+			
+			$('#show-horoscope').click(function(){
+				
+				if($('#month').val() == ""){
+					$('.please-enter').html('PLEASE SELECT A MONTH');
+				}else if($('#day').val() == ""){
+					$('.please-enter').html('PLEASE SELECT A DAY');
+				}else {
+					mm = parseInt($('#month').val());
+					dd = parseInt($('#day').val());
+					tt = (parseInt(Month[mm]) + dd);
+					var horo = '';
+					if(tt >= 82 && tt <= 111){
+						horo = 'aries';
+					} else if(tt >= 112 && tt <= 142){
+						horo = 'taurus';
+					} else if(tt >= 143 && tt <= 173){
+						horo = 'gemini';
+					} else if(tt >= 174 && tt <= 205){
+						horo = 'cancer';
+					} else if(tt >= 206 && tt <= 236){
+						horo = 'leo';
+					} else if(tt >= 237 && tt <= 267){
+						horo = 'virgo';
+					} else if(tt >= 268 && tt <= 297){
+						horo = 'libra';
+					} else if(tt >= 298 && tt <= 327){
+						horo = 'scorpio';
+					} else if(tt >= 328 && tt <= 357){
+						horo = 'sagittarus';
+					}  else if(tt >= 358 && tt <= 386){
+						horo = 'capricorn';
+					} else if(tt >= 387 && tt <= 416){
+						horo = 'aquarius';
+					} else {
+						horo = 'pisces';
+					}
+					//alert(tt);
+					window.location = 'horoscope/'+ horo +'.html';
+				}
+				
+				
+			});
+		});
+	</script>
+</html>

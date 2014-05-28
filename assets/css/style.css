@@ -1,0 +1,78 @@
+body {
+	background: url(../img/bg-blue.png);
+	background-size: 100% 100%;
+	font-family: 'Open Sans';
+	padding: 0px;
+	margin: 0px;
+}
+
+.title-holder {
+	margin-bottom: 60px;
+	background: #120c0e;
+	padding: 10px 0px 10px 0px;
+	height: 60px;
+}
+
+h1.title {
+	text-align: center;
+	font-weight: 100;
+	margin: 0px;
+	color: #C5C5C5;
+	font-size: 20px;
+	padding-top: 8px;
+}
+
+.please-enter {
+	text-align: center;
+	color: #FFF;
+	padding: 10px 10px 15px 10px;
+	font-size: 16px;
+}
+.month-holder, .day-holder {
+	padding: 15px;
+}
+
+.month, .day {
+	width: 100%;
+	padding: 10px;
+	font-size: 19px;
+	border-radius: 1px;
+	background: #424242;
+	color: #C5C5C5;
+	border: 1px solid #272727;
+}
+
+.button-holder {
+	padding: 15px;
+}
+
+.button-holder button {
+	width: 100%;
+	padding: 10px;
+	font-size: 18px;
+}
+
+.horoscope-img {
+	text-align: center;
+}
+
+.img-horo {
+	border-radius: 75px;
+}
+
+.characteristics {
+	text-align: center;
+	padding: 15px;
+	font-size: 15px;
+	color: #FFF;
+	margin-top: 10px;
+}
+.characteristics-title {
+	border-top: 1px solid #EEE;
+	border-bottom: 1px solid #EEE;
+	padding: 5px 0px 5px 0px;
+}
+
+.characteristics-content {
+	padding: 10px;
+}
